@@ -15,11 +15,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.proyectol.clases.TrabajadorHora;
 import com.example.proyectol.clases.TrabajadorTiempoCompleto;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class AgregarTrabajadorActivity extends AppCompatActivity {
-    Button btnAgregar;
-    EditText edtSalario, edtCodigo, edtNombre, edtApellido, edtEdad, edtValor, edtHora;
-    TextView tvSalario, tvCodigo, tvNombre, tvApellido, tvEdad, tvValor, tvHora;
+     private Button btnAgregar;
+    private TextInputEditText edtSalario, edtCodigo, edtNombre, edtApellido, edtEdad, edtValor, edtHora;
+
+    private TextInputLayout edtsalario,edtvalor,edthora;
     private Bundle bundle;
     private int idEleccion;
 
@@ -31,31 +34,29 @@ public class AgregarTrabajadorActivity extends AppCompatActivity {
         btnAgregar = findViewById(R.id.btnAgregar);
 
         edtSalario = findViewById(R.id.edtSalario);
-        edtCodigo = findViewById(R.id.edtCodigoT);
+        edtCodigo = findViewById(R.id.edtCodigo);
         edtNombre = findViewById(R.id.edtNombre);
         edtApellido = findViewById(R.id.edtApellido);
         edtEdad = findViewById(R.id.edtEdad);
         edtValor = findViewById(R.id.edtValor);
         edtHora = findViewById(R.id.edtHora);
 
-        tvSalario = findViewById(R.id.txvSalario);
-        tvValor = findViewById(R.id.txvValor);
-        tvHora= findViewById(R.id.txvHora);
+        edtsalario = findViewById(R.id.edtSalarioT);
+        edtvalor = findViewById(R.id.edtValorT);
+        edthora= findViewById(R.id.edtHoraT);
 
         bundle = getIntent().getExtras();
         idEleccion = bundle.getInt("tipoEleccion");
 
         if(idEleccion == 1){
             // Es Trabajador hora
-            tvSalario.setVisibility(View.GONE);
-            edtSalario.setVisibility(View.GONE);
+            edtsalario.setVisibility(View.GONE);
+
 
         }else{
             // Es tiempo completo
-            tvValor.setVisibility(View.GONE);
-            edtValor.setVisibility(View.GONE);
-            tvHora.setVisibility(View.GONE);
-            edtHora.setVisibility(View.GONE);
+            edtvalor.setVisibility(View.GONE);
+            edthora.setVisibility(View.GONE);
 
         }
 
