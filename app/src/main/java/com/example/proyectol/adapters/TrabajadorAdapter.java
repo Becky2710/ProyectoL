@@ -34,7 +34,7 @@ public class TrabajadorAdapter extends RecyclerView.Adapter<ViewHolderTrabajador
         if(datos.get(position).getTipoTrabajador() == 1){
             holder.getTipoTrabajador().setText("TH");
         }else{
-            holder.getTipoTrabajador().setText("TH");
+            holder.getTipoTrabajador().setText("TC");
         }
         holder.getSalarioTrabajador().setText(String.valueOf(datos.get(position).getTotalPagar()));
     }

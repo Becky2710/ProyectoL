@@ -13,6 +13,10 @@
         android:theme="@style/Theme.ProyectoL"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".ElegirTipoTrabajadorActivity"
             android:exported="false" />
         <activity
@@ -25,8 +29,9 @@
             android:name=".AcercaDeActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
+            android:name=".LoginActivity"
+            android:exported="true" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
